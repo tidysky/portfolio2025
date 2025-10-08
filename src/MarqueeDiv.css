@@ -1,0 +1,16 @@
+/* MarqueeDiv.css */
+.marquee-container {
+  height: 5vh;
+  width: 100%;
+  overflow: hidden; 
+  position: relative;
+  background-color:#000037;
+  color: #5862ec;
+  display: flex;
+  align-items: center;
+}
+
+.marquee-content {
+  display: inline-flex; 
+  white-space: nowrap; 
+}
