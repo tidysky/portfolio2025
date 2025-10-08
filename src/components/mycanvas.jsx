@@ -25,17 +25,15 @@ export default function Mycanvas() {
 useGSAP(() => {
   gsap.to(".canvasZindex", {
     scrollTrigger: {
-      trigger: ".thirdScreen",
+      trigger: ".thridAndFourthScreens",
       start: "top center",
-      end: "top -1000",
+      end: "bottom -10000",
       toggleClass: { targets: ".canvasZindex", className: "hidden-canvas" },
     },
   });
+
+   
 });
-
-
-
-
 
   return (
     <>

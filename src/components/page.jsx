@@ -14,7 +14,16 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 export default function Page() {
 
- 
+ const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("Norazheng1010@hotmail.com").then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500); // 1.5 秒后隐藏提示
+    });
+  };
+
+
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
   const timeoutRef = useRef(null);
@@ -122,7 +131,8 @@ export default function Page() {
             </div>
           </div>
 
-         
+         <div className='thridAndFourthScreens'>
+
           <div className="thirdScreen h-screen w-full flex flex-col relative font-sans">
             <MarqueeDivLeft />
             <div className="bg-[#6074f4] box-content flex-1 flex relative overflow-hidden ">
@@ -132,16 +142,33 @@ export default function Page() {
           </div>
 
           {/* 第四屏 */}
-          <div className="fourthScreen h-[4 0vh] w-full flex flex-col relative block">
+          <div className="fourthScreen h-[40vh] w-full flex flex-col relative block">
             <MarqueeDivRight />
-            <div className="bg-[#5862ec] box-content flex-1 flex flex-col justify-center items-center text-center font-mono">
-              <div className='text-[#b0e86f] border-[1px] border-[#b0e86f] w-[40vh] h-[7vh] flex justify-center items-center my-[4vh] '><img src='/icon.png'/>　<span className='text-lg'>Norazheng@hotmail.com</span> </div>
-              <div className='text-sm mb-[4vh]'>copyright © 2025 Nora Zheng <br />
-              Design by Nora Zheng <br />
-              Front-end developed by Nora Zheng <br /></div>
-            </div>
-          </div>
+      <div className="bg-[#5862ec] box-content flex-1 flex flex-col justify-center items-center text-center font-mono">
+        
+        <div
+          onClick={handleCopy}
+          className="text-[#b0e86f] border-[1px] border-[#b0e86f] w-[45vh] h-[7vh] flex justify-center items-center my-[4vh] cursor-pointer hover:bg-[#4e54d1] transition-colors"
+        >
+          <img src="/icon.png" alt="email icon" className="mr-2" />
+          <span className="text-lg">Norazheng1010@hotmail.com</span>
+        </div>
 
+        {copied && (
+          <div className="absolute top-[20%] bg-black text-white px-4 py-2 rounded-md text-sm">
+            Copied!
+          </div>
+        )}
+
+        <div className="text-sm mb-[4vh]">
+          copyright © 2025 Nora Zheng <br />
+          Design by Nora Zheng <br />
+          Front-end developed by Nora Zheng <br />
+        </div>
+      </div>
+    </div>
+
+        </div>
         </div>
       </div>
      
