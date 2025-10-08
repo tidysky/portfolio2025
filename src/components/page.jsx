@@ -151,7 +151,7 @@ export default function Page() {
           className="text-[#b0e86f] border-[1px] border-[#b0e86f] w-[45vh] h-[7vh] flex justify-center items-center my-[4vh] cursor-pointer hover:bg-[#4e54d1] transition-colors"
         >
           <img src="/icon.png" alt="email icon" className="mr-2" />
-          <span className="text-lg">Norazheng1010@hotmail.com</span>
+          <span className="text-lg">norazhengpro@outlook.com</span>
         </div>
 
         {copied && (
