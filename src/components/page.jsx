@@ -205,14 +205,16 @@ export default function Page() {
           <div className="fourthScreen h-[40vh] w-full flex flex-col relative block">
             <MarqueeDivRight />
       <div className="bg-[#5862ec] box-content flex-1 flex flex-col justify-center items-center text-center font-mono">
-        
-        <div
-          onClick={handleCopy}
-          className="text-[#b0e86f] border-[1px] border-[#b0e86f] w-[45vh] h-[7vh] flex justify-center items-center my-[4vh] cursor-pointer hover:bg-[#4e54d1] transition-colors"
-        >
-          <img src="/icon.png" alt="email icon" className="mr-2" />
-          <span className="text-lg">norazhengpro@outlook.com</span>
-        </div>
+            <div className='flex justify-center items-center '>
+              <a href='https://www.linkedin.com/in/nora-zheng-459546312/' target='_blank' className='flex justify-center items-center w-[10vh] h-[7vh]' ><img src='linkin.png' alt='linkin' className='w-[5vh] mx-auto'/></a>
+              <div
+                onClick={handleCopy}
+                className="text-[#b0e86f] border-[1px] border-[#b0e86f] w-[45vh] h-[7vh] flex justify-center items-center my-[4vh] cursor-pointer hover:bg-[#4e54d1] transition-colors"
+              >
+                <img src="/icon.png" alt="email icon" className="mr-2" />
+                <span className="text-lg">norazhengpro@outlook.com</span>
+              </div>
+            </div>
 
                 {copied && (
                   <div className="absolute top-[20%] bg-black text-white px-4 py-2 rounded-md text-sm">
