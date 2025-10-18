@@ -9,6 +9,8 @@ import MarqueeDivLeft from "./scrollineLeft";
 import MarqueeDivRight from "./scrollineRight";
 import CircularSlider from './slider.jsx';
 import LetterGlitch from './LetterGlitch';
+import StalkWorks from './StalkWorks.jsx';
+import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
@@ -66,6 +68,48 @@ export default function Page() {
     });
 
     
+    const screenheight = window.innerHeight;
+    const imgs = gsap.utils.toArray(".stalkimgs img");
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".thirdScreen",
+        start: "top top",
+        // endTrigger: ".finalimg",
+        end: "+=" + 1.55 * screenheight,
+        scrub: true,
+        pin: true,
+        // anticipatePin: 1,
+       
+      pinSpacer: false
+      }
+    });
+
+   
+    gsap.set([imgs[1], imgs[2]], { scale: 1.1,opacity:0 });
+    // 动画部分
+    tl.to(imgs[1], { 
+                      y: -0.5*screenheight,
+                      opacity:1,
+                      delay:1,
+                    })
+      .to(imgs[1], { 
+                      y: -0.55*screenheight,
+                      scale: 1,
+                    })          
+      .to(imgs[2], { 
+                      y: -1*screenheight,
+                      opacity:1,
+                      delay:1,
+                    })
+      .to(imgs[2], { 
+                      y: -1.1*screenheight,
+                      scale: 1,
+                    })
+
+ 
+
+
 
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
@@ -135,38 +179,42 @@ export default function Page() {
 
           <div className="thirdScreen h-screen w-full flex flex-col relative font-sans">
             <MarqueeDivLeft />
-            <div className="bg-[#6074f4] box-content flex-1 flex relative overflow-hidden ">
-              <div className='text-8xl text-[#b0e86f flex justify-center text-center w-[100vw] text-[#b0e86f] pt-[5%] bebas-neue-regular'>CASES</div>
-              <CircularSlider />
+            <div className="bg-[#6074f4] box-content flex-1 flex flex-col relative mx-auto overflow-hidden ">
+              <div className='text-8xl text-[#b0e86f flex justify-center text-center w-[100vw] text-[#b0e86f] pt-[5%] pb-[2%] bebas-neue-regular'>CASES</div>
+             <div className="flex flex-col mx-auto stalkimgs">
+                <a href='https://sharingcountry.vercel.app/' target='_blank'><img src="works2.png" className="stack-image" alt="work2" /></a>
+                <a href='https://www.behance.net/zhengnora' target='_blank'><img src="works3.png" className="stack-image" alt="work3" /></a>
+                <a href='https://norazhengportfolio2025.vercel.app/ ' target='_blank'><img src="works1.png" className="stack-image" alt="work1" /></a>
               </div>
+
+            </div>
           </div>
 
           {/* 第四屏 */}
           <div className="fourthScreen h-[40vh] w-full flex flex-col relative block">
             <MarqueeDivRight />
-      <div className="bg-[#5862ec] box-content flex-1 flex flex-col justify-center items-center text-center font-mono">
-        
-        <div
-          onClick={handleCopy}
-          className="text-[#b0e86f] border-[1px] border-[#b0e86f] w-[45vh] h-[7vh] flex justify-center items-center my-[4vh] cursor-pointer hover:bg-[#4e54d1] transition-colors"
-        >
-          <img src="/icon.png" alt="email icon" className="mr-2" />
-          <span className="text-lg">Norazheng1010@hotmail.com</span>
-        </div>
+            <div className="bg-[#5862ec] box-content flex-1 flex flex-col justify-center items-center text-center font-mono">
+              <div
+                onClick={handleCopy}
+                className="text-[#b0e86f] border-[1px] border-[#b0e86f] w-[45vh] h-[7vh] flex justify-center items-center my-[4vh] cursor-pointer hover:bg-[#4e54d1] transition-colors"
+              >
+                <img src="/icon.png" alt="email icon" className="mr-2" />
+                <span className="text-lg">Norazheng1010@hotmail.com</span>
+              </div>
 
-        {copied && (
-          <div className="absolute top-[20%] bg-black text-white px-4 py-2 rounded-md text-sm">
-            Copied!
-          </div>
-        )}
+                {copied && (
+                  <div className="absolute top-[20%] bg-black text-white px-4 py-2 rounded-md text-sm">
+                    Copied!
+                  </div>
+                )}
 
-        <div className="text-sm mb-[4vh]">
-          copyright © 2025 Nora Zheng <br />
-          Design by Nora Zheng <br />
-          Front-end developed by Nora Zheng <br />
-        </div>
-      </div>
-    </div>
+              <div className="text-sm mb-[4vh]">
+                copyright © 2025 Nora Zheng <br />
+                Design by Nora Zheng <br />
+                Front-end developed by Nora Zheng <br />
+              </div>
+            </div>
+         </div>
 
         </div>
         </div>
