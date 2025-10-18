@@ -16,6 +16,11 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 export default function Page() {
 
+  document.querySelectorAll('a').forEach(link => {
+  link.style.cursor = 'pointer';
+});
+
+
  const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -132,6 +137,7 @@ export default function Page() {
   return (
     <>
       {/* 3D Canvas */}
+      
       <Mycanvas />
 
       {/* 滚动内容 */}
@@ -193,9 +199,9 @@ export default function Page() {
             <div className="bg-[#6074f4] box-content flex-1 flex flex-col relative mx-auto overflow-hidden ">
               <div className='text-8xl text-[#b0e86f flex justify-center text-center w-[100vw] text-[#b0e86f] pt-[5%] pb-[2%] bebas-neue-regular'>CASES</div>
              <div className="flex flex-col mx-auto stalkimgs">
-                <a href='https://sharingcountry.vercel.app/' target='_blank'><img src="works2.png" className="stack-image" alt="work2" /></a>
-                <a href='https://www.behance.net/zhengnora' target='_blank'><img src="works3.png" className="stack-image" alt="work3" /></a>
-                <a href='https://norazhengportfolio2025.vercel.app/ ' target='_blank'><img src="works1.png" className="stack-image" alt="work1" /></a>
+                <a href='https://sharingcountry.vercel.app/' className='cursor-pointer' target='_blank'><img src="works2.png" className="stack-image pointer-events-none" alt="work2" /></a>
+                <a href='https://www.behance.net/zhengnora' className='cursor-pointer' target='_blank'><img src="works3.png" className="stack-image pointer-events-none" alt="work3" /></a>
+                <a href='https://norazhengportfolio2025.vercel.app/ ' className='cursor-pointer' target='_blank'><img src="works1.png" className="stack-image pointer-events-none" alt="work1" /></a>
               </div>
 
             </div>
@@ -206,7 +212,8 @@ export default function Page() {
             <MarqueeDivRight />
       <div className="bg-[#5862ec] box-content flex-1 flex flex-col justify-center items-center text-center font-mono">
             <div className='flex justify-center items-center '>
-              <a href='https://www.linkedin.com/in/nora-zheng-459546312/' target='_blank' className='flex justify-center items-center w-[10vh] h-[7vh]' ><img src='linkin.png' alt='linkin' className='w-[5vh] mx-auto'/></a>
+              <a href='https://www.linkedin.com/in/nora-zheng-459546312/' target='_blank' style={{ cursor: 'pointer' }} className='flex justify-center items-center w-[3vw] h-[7vh] mr-[1vw] !cursor-pointer' ><img src='linkin.png' alt='linkin' className='w-[5vh] mx-auto !cursor-pointer'/></a>
+              <a href='https://www.behance.net/zhengnora' target='_blank' className='flex justify-center items-center w-[3vw] h-[7vh] mr-[1vw] !cursor-pointer z-[50]' ><img src='behance.png' alt='linkin' className='w-[5vh] mx-auto !cursor-pointer'/></a>
               <div
                 onClick={handleCopy}
                 className="text-[#b0e86f] border-[1px] border-[#b0e86f] w-[45vh] h-[7vh] flex justify-center items-center my-[4vh] cursor-pointer hover:bg-[#4e54d1] transition-colors"

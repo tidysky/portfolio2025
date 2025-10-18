@@ -11,7 +11,12 @@
 
 .hidden-canvas {
   z-index: -1 !important;
-  pointer-events: none !important;
+ 
+}
+
+/* 强制确保所有具有 href 属性的元素都显示手型光标 */
+a[href] {
+  cursor: pointer !important; /* 使用 !important 确保优先级最高 */
 }
 
 

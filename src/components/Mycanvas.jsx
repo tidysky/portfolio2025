@@ -38,7 +38,7 @@ useGSAP(() => {
   return (
     <>
     
-      <div className="canvasIndex" style={{
+      <div className="canvasIndex " style={{
         width: "100vw",
         height: "100vh",
         position: 'absolute',
