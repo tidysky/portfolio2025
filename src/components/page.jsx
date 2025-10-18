@@ -102,6 +102,7 @@ export default function Page() {
                       opacity:1,
                       delay:1,
                     })
+                
       .to(imgs[2], { 
                       y: -imgs[1].offsetHeight*1.94,
                       scale: 1,
