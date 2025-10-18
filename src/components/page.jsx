@@ -89,21 +89,21 @@ export default function Page() {
     gsap.set([imgs[1], imgs[2]], { scale: 1.1,opacity:0 });
     // 动画部分
     tl.to(imgs[1], { 
-                      y: -0.5*screenheight,
+                      y: -imgs[1].offsetHeight*0.8,
                       opacity:1,
                       delay:1,
                     })
       .to(imgs[1], { 
-                      y: -0.55*screenheight,
+                      y: -imgs[1].offsetHeight*0.97,
                       scale: 1,
                     })          
       .to(imgs[2], { 
-                      y: -1*screenheight,
+                      y: -imgs[1].offsetHeight*1.6,
                       opacity:1,
                       delay:1,
                     })
       .to(imgs[2], { 
-                      y: -1.1*screenheight,
+                      y: -imgs[1].offsetHeight*1.94,
                       scale: 1,
                     })
 
