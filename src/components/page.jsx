@@ -85,7 +85,18 @@ export default function Page() {
       }
     });
 
-   
+   Promise.all(
+    imgs.map(img => new Promise(resolve => {
+      // 检查图片是否已加载
+      if (img.complete && img.naturalHeight !== 0) {
+        resolve();
+      } else {
+        // 监听加载和错误事件
+        img.addEventListener('load', resolve, { once: true });
+        img.addEventListener('error', resolve, { once: true });
+      }
+    }))
+  ).then(() => {
     gsap.set([imgs[1], imgs[2]], { scale: 1.1,opacity:0 });
     // 动画部分
     tl.to(imgs[1], { 
@@ -101,14 +112,13 @@ export default function Page() {
                       y: -imgs[1].offsetHeight*1.6,
                       opacity:1,
                       delay:1,
-                    })
-                
+                    })        
       .to(imgs[2], { 
                       y: -imgs[1].offsetHeight*1.94,
                       scale: 1,
                     })
 
- 
+                  });
 
 
 
