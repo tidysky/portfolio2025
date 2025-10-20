@@ -86,7 +86,7 @@ export default function Page() {
         pin: true,
         // anticipatePin: 1,
        
-      pinSpacer: false
+      // pinSpacer: false
       }
     });
 
@@ -108,19 +108,23 @@ export default function Page() {
                       y: -imgs[1].offsetHeight*0.8,
                       opacity:1,
                       delay:1,
+                      zIndex: 80
                     })
       .to(imgs[1], { 
                       y: -imgs[1].offsetHeight*0.97,
                       scale: 1,
+                      zIndex: 80
                     })          
       .to(imgs[2], { 
                       y: -imgs[1].offsetHeight*1.6,
                       opacity:1,
                       delay:1,
+                      zIndex: 81,
                     })        
       .to(imgs[2], { 
                       y: -imgs[1].offsetHeight*1.94,
                       scale: 1,
+                      zIndex: 81,
                     })
 
                   });
@@ -199,9 +203,9 @@ export default function Page() {
             <div className="bg-[#6074f4] box-content flex-1 flex flex-col relative mx-auto overflow-hidden ">
               <div className='text-8xl text-[#b0e86f flex justify-center text-center w-[100vw] text-[#b0e86f] pt-[5%] pb-[2%] bebas-neue-regular'>CASES</div>
              <div className="flex flex-col mx-auto stalkimgs">
-                <a href='https://sharingcountry.vercel.app/' className='cursor-pointer' target='_blank'><img src="works1.png" className="stack-image pointer-events-none" alt="work2" /></a>
-                <a href='https://www.behance.net/zhengnora' className='cursor-pointer' target='_blank'><img src="works2.png" className="stack-image pointer-events-none" alt="work3" /></a>
-                <a href='https://norazhengportfolio2025.vercel.app/ ' className='cursor-pointer' target='_blank'><img src="works3.png" className="stack-image pointer-events-none" alt="work1" /></a>
+                <a href='https://sharingcountry.vercel.app/' className='cursor-pointer' target='_blank'><img src="works1.png" className="stack-image" alt="work1" /></a>
+                <a href='https://www.behance.net/zhengnora' className='cursor-pointer' target='_blank'><img src="works2.png" className="stack-image " alt="work2" /></a>
+                <a href='https://norazhengportfolio2025.vercel.app/ ' className='cursor-pointer' target='_blank'><img src="works3.png" className="stack-image " alt="work3" /></a>
               </div>
 
             </div>
