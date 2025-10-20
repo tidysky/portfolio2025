@@ -199,9 +199,9 @@ export default function Page() {
             <div className="bg-[#6074f4] box-content flex-1 flex flex-col relative mx-auto overflow-hidden ">
               <div className='text-8xl text-[#b0e86f flex justify-center text-center w-[100vw] text-[#b0e86f] pt-[5%] pb-[2%] bebas-neue-regular'>CASES</div>
              <div className="flex flex-col mx-auto stalkimgs">
-                <a href='https://sharingcountry.vercel.app/' className='cursor-pointer' target='_blank'><img src="works2.png" className="stack-image pointer-events-none" alt="work2" /></a>
-                <a href='https://www.behance.net/zhengnora' className='cursor-pointer' target='_blank'><img src="works3.png" className="stack-image pointer-events-none" alt="work3" /></a>
-                <a href='https://norazhengportfolio2025.vercel.app/ ' className='cursor-pointer' target='_blank'><img src="works1.png" className="stack-image pointer-events-none" alt="work1" /></a>
+                <a href='https://sharingcountry.vercel.app/' className='cursor-pointer' target='_blank'><img src="works1.png" className="stack-image pointer-events-none" alt="work2" /></a>
+                <a href='https://www.behance.net/zhengnora' className='cursor-pointer' target='_blank'><img src="works2.png" className="stack-image pointer-events-none" alt="work3" /></a>
+                <a href='https://norazhengportfolio2025.vercel.app/ ' className='cursor-pointer' target='_blank'><img src="works3.png" className="stack-image pointer-events-none" alt="work1" /></a>
               </div>
 
             </div>
