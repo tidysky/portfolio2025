@@ -205,7 +205,7 @@ export default function Page() {
              <div className="flex flex-col mx-auto stalkimgs">
                 <a href='https://sharingcountry.vercel.app/' className='cursor-pointer' target='_blank'><img src="works1.png" className="stack-image" alt="work1" /></a>
                 <a href='https://www.behance.net/zhengnora' className='cursor-pointer' target='_blank'><img src="works2.png" className="stack-image " alt="work2" /></a>
-                <a href='https://norazhengportfolio2025.vercel.app/ ' className='cursor-pointer' target='_blank'><img src="works3.png" className="stack-image " alt="work3" /></a>
+                <a href='https://3dpracticedemo.vercel.app/ ' className='cursor-pointer' target='_blank'><img src="works3.png" className="stack-image " alt="work3" /></a>
               </div>
 
             </div>
