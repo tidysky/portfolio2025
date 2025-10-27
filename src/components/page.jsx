@@ -126,6 +126,17 @@ export default function Page() {
                       scale: 1,
                       zIndex: 81,
                     })
+      .to(imgs[3], { 
+                      y: -imgs[1].offsetHeight*2.4,
+                      opacity:1,
+                      delay:1,
+                      zIndex: 81,
+                    })        
+      .to(imgs[3], { 
+                      y: -imgs[1].offsetHeight*2.91,
+                      scale: 1,
+                      zIndex: 81,
+                    })
 
                   });
 
@@ -206,6 +217,7 @@ export default function Page() {
                 <a href='https://sharingcountry.vercel.app/' className='cursor-pointer' target='_blank'><img src="works1.png" className="stack-image" alt="work1" /></a>
                 <a href='https://www.behance.net/zhengnora' className='cursor-pointer' target='_blank'><img src="works2.png" className="stack-image " alt="work2" /></a>
                 <a href='https://3dpracticedemo.vercel.app/ ' className='cursor-pointer' target='_blank'><img src="works3.png" className="stack-image " alt="work3" /></a>
+                 <a href='https://norazhengportfolio2025.vercel.app/ ' className='cursor-pointer' target='_blank'><img src="works4.png" className="stack-image " alt="work3" /></a>
               </div>
 
             </div>
