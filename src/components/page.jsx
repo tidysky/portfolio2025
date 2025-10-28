@@ -74,7 +74,9 @@ export default function Page() {
 
     
     const screenheight = window.innerHeight;
-    const imgs = gsap.utils.toArray(".stalkimgs img");
+    // const imgs = gsap.utils.toArray(".stalkimgs img");
+    const links = gsap.utils.toArray(".stalkimgs a");
+
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -91,55 +93,24 @@ export default function Page() {
     });
 
    Promise.all(
-    imgs.map(img => new Promise(resolve => {
-      // 检查图片是否已加载
-      if (img.complete && img.naturalHeight !== 0) {
-        resolve();
-      } else {
-        // 监听加载和错误事件
-        img.addEventListener('load', resolve, { once: true });
-        img.addEventListener('error', resolve, { once: true });
-      }
-    }))
-  ).then(() => {
-    gsap.set([imgs[1], imgs[2]], { scale: 1.1,opacity:0 });
-    // 动画部分
-    tl.to(imgs[1], { 
-                      y: -imgs[1].offsetHeight*0.8,
-                      opacity:1,
-                      delay:1,
-                      zIndex: 80
-                    })
-      .to(imgs[1], { 
-                      y: -imgs[1].offsetHeight*0.97,
-                      scale: 1,
-                      zIndex: 80
-                    })          
-      .to(imgs[2], { 
-                      y: -imgs[1].offsetHeight*1.6,
-                      opacity:1,
-                      delay:1,
-                      zIndex: 81,
-                    })        
-      .to(imgs[2], { 
-                      y: -imgs[1].offsetHeight*1.94,
-                      scale: 1,
-                      zIndex: 81,
-                    })
-      .to(imgs[3], { 
-                      y: -imgs[1].offsetHeight*2.4,
-                      opacity:1,
-                      delay:1,
-                      zIndex: 81,
-                    })        
-      .to(imgs[3], { 
-                      y: -imgs[1].offsetHeight*2.91,
-                      scale: 1,
-                      zIndex: 81,
-                    })
+  links.map(a => {
+    const img = a.querySelector('img');
+    return new Promise(r => {
+      if (img.complete && img.naturalHeight !== 0) return r();
+      img.addEventListener('load', r, { once: true });
+      img.addEventListener('error', r, { once: true });
+    });
+  })
+).then(() => {
+  gsap.set([links[1], links[2]], { scale: 1.1, opacity: 0 });
 
-                  });
-
+  tl.to(links[1], { y: -links[1].offsetHeight * 0.8,  opacity: 1, delay: 1, zIndex: 80 })
+    .to(links[1], { y: -links[1].offsetHeight * 0.97, scale: 1, zIndex: 80 })
+    .to(links[2], { y: -links[1].offsetHeight * 1.6,  opacity: 1, delay: 1, zIndex: 81 })
+    .to(links[2], { y: -links[1].offsetHeight * 1.94, scale: 1, zIndex: 81 })
+    .to(links[3], { y: -links[1].offsetHeight * 2.4,  opacity: 1, delay: 1, zIndex: 82 })
+    .to(links[3], { y: -links[1].offsetHeight * 2.91, scale: 1, zIndex: 82 });
+});
 
 
     return () => {
@@ -216,7 +187,7 @@ export default function Page() {
              <div className="flex flex-col mx-auto stalkimgs">
                 <a href='https://sharingcountry.vercel.app/' className='cursor-pointer' target='_blank'><img src="works1.png" className="stack-image" alt="work1" /></a>
                 <a href='https://norazhengportfolio2025.vercel.app/ ' className='cursor-pointer' target='_blank'><img src="works4.png" className="stack-image " alt="work3" /></a>
-                <a href='https://3dpracticedemo.vercel.app/ ' className='cursor-pointer' target='_blank'><img src="works3.png" className="stack-image " alt="work3" /></a>
+                <a href='https://3dpracticedemo.vercel.app/' className='cursor-pointer' target='_blank'><img src="works3.png" className="stack-image " alt="work3" /></a>
                 <a href='https://www.behance.net/zhengnora' className='cursor-pointer' target='_blank'><img src="works2.png" className="stack-image " alt="work2" /></a>
               </div>
 
