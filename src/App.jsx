@@ -35,7 +35,7 @@ export default function App() {
           }}
         >
           <h2>For the best visual and interactive experience, please access this website from your computer😊.</h2><br />
-          <p >https://norazhengportfolio2025.vercel.app/</p>
+          <p >👉 https://norazhengportfolio2025.vercel.app/</p>
         </div>
       )}
     </>
