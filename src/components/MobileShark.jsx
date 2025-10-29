@@ -13,7 +13,7 @@
       {
         position = [0, 0, 0],
         rotation = [-0.5, -1.7, 0],
-        scale = 0.20,
+        scale = 0.15,
         ...props
       },
       ref
