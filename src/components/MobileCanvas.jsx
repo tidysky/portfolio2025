@@ -22,21 +22,17 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 
 export default function MobileCanvas() {
-
   return (
-    <>
-    
-      <div>
-       
-        <Canvas camera={{ position: [0, 2, 20], fov: 50 }} className="w-[100vw]" >
-            <ambientLight intensity={1} />
-            <directionalLight position={[3, 3, 3]} intensity={0.5} />
-            {/* 渲染第一只鲨鱼 */}
-            <MobileShark />
-           
-        </Canvas>
-      </div>
-     
-    </>
+    <div className="w-screen h-full overflow-hidden">
+      <Canvas
+        camera={{ position: [0, 2, 20], fov: 50 }}
+        className="w-full h-full block"
+      >
+        <ambientLight intensity={1} />
+        <directionalLight position={[3, 3, 3]} intensity={0.5} />
+        <MobileShark />
+      </Canvas>
+    </div>
   );
 }
+

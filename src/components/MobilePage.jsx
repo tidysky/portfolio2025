@@ -19,7 +19,7 @@ export default function MobilePage(){
         <>
         <div className="firstScreen h-screen w-full flex flex-col relative">
          <div className="z-[50]"><MarqueeDivLeft /></div>
-        <div className="bg-[#5862ec] border-[#000037] border-[5px] flex-[1] relative">
+        <div className="bg-[#5862ec] flex-[1] relative">
             
             <div className="w-full h-full mx-auto flex flex-col ">    
 
