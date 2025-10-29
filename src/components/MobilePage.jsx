@@ -23,15 +23,15 @@ export default function MobilePage(){
             
             <div className="w-full h-full mx-auto flex flex-col ">    
 
-                <div className="flex items-center py-[2vh]">
+                <div className="flex items-center pt-[2vh]">
                   <img src="title.png" className="title z-10" alt="title" data-speed='2' data-log="0.3" />
                 </div>
-                <div className='justify-center text-center text-white z-[100] py-[2vh]'>
+                <div className='justify-center text-center text-white z-[100] pt-[2vh]'>
                     {/* <MobileCanvas /> */}
                      <h2>For the best visual and interactive experience, please access this website from your computer😊.</h2><br />
                      <p >👉https://norazhengportfolio2025.vercel.app/</p>
                 </div>
-                <div className='flex-1 w-full h-full flex justify-center'>
+                <div className='flex flex-1 w-full h-full justify-center'>
                     <MobileCanvas />
                 </div>
             </div>
