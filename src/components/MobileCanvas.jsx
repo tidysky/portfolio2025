@@ -28,7 +28,7 @@ export default function MobileCanvas() {
     
       <div>
        
-        <Canvas camera={{ position: [0, 2, 20], fov: 50 }}>
+        <Canvas camera={{ position: [0, 2, 20], fov: 50 }} className="w-[100vw]" >
             <ambientLight intensity={1} />
             <directionalLight position={[3, 3, 3]} intensity={0.5} />
             {/* 渲染第一只鲨鱼 */}

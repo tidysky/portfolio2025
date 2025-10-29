@@ -21,11 +21,15 @@ a[href] {
 }
 
 
-html,body,canvas {
+html,body {
   margin: 0;
   overflow-x: hidden;
   padding: 0;
   height: 100%;
+}
+canvas{
+  margin: 0;
+  padding: 0;
 }
 
 .bebas-neue-regular {

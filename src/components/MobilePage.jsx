@@ -31,7 +31,7 @@ export default function MobilePage(){
                      <h2>For the best visual and interactive experience, please access this website from your computer😊.</h2><br />
                      <p >👉https://norazhengportfolio2025.vercel.app/</p>
                 </div>
-                <div className='flex flex-1 w-full h-full justify-center z-[50]'>
+                <div className='flex flex-1 w-[100vw] h-full justify-center z-[50]'>
                     <MobileCanvas />
                 </div>
             </div>
