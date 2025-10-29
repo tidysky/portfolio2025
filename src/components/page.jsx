@@ -170,8 +170,9 @@ export default function Page() {
                   UX/UI DESIGNER / FRONT-END DEVELOPER
                 </span>
                 <p className="text-lg py-1 text-[#eff4ff]" >
-                  I’m a Design Engineer who designs UI/UX and brings it to life with code.<br /> I love creating fun, interactive experiences in the digital world that delight users and make websites memorable.
-                </p>
+                  A front-end developer with a background in interaction design and electronic arts.<br /><br />
+                  I’m currently looking for an entry-level front-end role where I can apply my design sense and coding skills to real-world projects.
+</p>
               </div>
               
               
@@ -198,6 +199,7 @@ export default function Page() {
           <div className="fourthScreen h-[40vh] w-full flex flex-col relative block">
             <MarqueeDivRight />
       <div className="bg-[#5862ec] box-content flex-1 flex flex-col justify-center items-center text-center font-mono">
+        
             <div className='flex justify-center items-center '>
               <a href='https://www.linkedin.com/in/nora-zheng-459546312/' target='_blank' style={{ cursor: 'pointer' }} className='flex justify-center items-center w-[3vw] h-[7vh] mr-[1vw] !cursor-pointer' ><img src='linkin.png' alt='linkin' className='w-[5vh] mx-auto !cursor-pointer'/></a>
               <a href='https://www.behance.net/zhengnora' target='_blank' className='flex justify-center items-center w-[3vw] h-[7vh] mr-[1vw] !cursor-pointer z-[50]' ><img src='behance.png' alt='linkin' className='w-[5vh] mx-auto !cursor-pointer'/></a>
