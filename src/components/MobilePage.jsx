@@ -29,7 +29,7 @@ export default function MobilePage(){
                 <div className='justify-center text-center text-white z-[100] pt-[2vh]'>
                     {/* <MobileCanvas /> */}
                      <h2>For the best visual and interactive experience, please access this website from your computer😊.</h2><br />
-                     <p >👉https://norazhengportfolio2025.vercel.app/</p>
+                     <p >👉https://norazhengportfolio.vercel.app/</p>
                 </div>
                 <div className='flex flex-1 w-[100vw] h-full justify-center z-[50]'>
                     <MobileCanvas />
