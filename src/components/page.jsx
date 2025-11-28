@@ -109,7 +109,9 @@ export default function Page() {
     .to(links[2], { y: -links[1].offsetHeight * 1.6,  opacity: 1, delay: 1, zIndex: 81 })
     .to(links[2], { y: -links[1].offsetHeight * 1.94, scale: 1, zIndex: 81 })
     .to(links[3], { y: -links[1].offsetHeight * 2.4,  opacity: 1, delay: 1, zIndex: 82 })
-    .to(links[3], { y: -links[1].offsetHeight * 2.91, scale: 1, zIndex: 82 });
+    .to(links[3], { y: -links[1].offsetHeight * 2.91, scale: 1, zIndex: 82 })
+    .to(links[4], { y: -links[1].offsetHeight * 3.2,  opacity: 1, delay: 1, zIndex: 83 })
+    .to(links[4], { y: -links[1].offsetHeight * 3.88, scale: 1, zIndex: 83 })
 });
 
 
@@ -186,6 +188,7 @@ export default function Page() {
             <div className="bg-[#6074f4] box-content flex-1 flex flex-col relative mx-auto overflow-hidden ">
               <div className='text-8xl text-[#b0e86f flex justify-center text-center w-[100vw] text-[#b0e86f] pt-[5%] pb-[2%] bebas-neue-regular'>CASES</div>
              <div className="flex flex-col mx-auto stalkimgs">
+                <a href='https://myweatherapp-flame.vercel.app/' className='cursor-pointer' target='_blank'><img src="weatherapp.png" className="stack-image" alt="work1" /></a>
                 <a href='https://sharingcountry.vercel.app/' className='cursor-pointer' target='_blank'><img src="works1.png" className="stack-image" alt="work1" /></a>
                 <a href='https://norazhengportfolio2025.vercel.app/ ' className='cursor-pointer' target='_blank'><img src="works4.png" className="stack-image " alt="work3" /></a>
                 <a href='https://3dpracticedemo.vercel.app/' className='cursor-pointer' target='_blank'><img src="works3.png" className="stack-image " alt="work3" /></a>
