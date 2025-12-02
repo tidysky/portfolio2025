@@ -172,7 +172,7 @@ export default function Page() {
                   UX/UI DESIGNER / FRONT-END DEVELOPER
                 </span>
                 <p className="text-lg py-1 text-[#eff4ff]" >
-                  A design engineer with experience in UI/UX design and front-end development. <br />Skilled in mobile first web development and user-centered interactive design. <br />I learn fast, stay curious, and work well with people. Looking for opportunities right now.
+                  A design engineer with experience in UI/UX design and front-end development.  <br /><br />Skilled in mobile first web development and user-centered interactive design.  <br /><br />I learn fast, stay curious, and work well with people. Looking for opportunities right now.
 </p>
               </div>
               
