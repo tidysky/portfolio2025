@@ -172,8 +172,7 @@ export default function Page() {
                   UX/UI DESIGNER / FRONT-END DEVELOPER
                 </span>
                 <p className="text-lg py-1 text-[#eff4ff]" >
-                  A front-end developer with a background in interaction design and electronic arts.<br /><br />
-                  I’m currently looking for an entry-level front-end role where I can apply my design sense and coding skills to real-world projects.
+                  A design engineer with experience in UI/UX design and front-end development. <br />Skilled in mobile first web development and user-centered interactive design. <br />I learn fast, stay curious, and work well with people. Looking for opportunities right now.
 </p>
               </div>
               
