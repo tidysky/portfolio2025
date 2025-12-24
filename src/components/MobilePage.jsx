@@ -16,19 +16,51 @@ import MobileCanvas from "./MobileCanvas.jsx"
 export default function MobilePage(){
 
 
-    useGSAP(() => {
-        // 记得在这里注册插件
-        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  // Initialize ScrollSmoother and ScrollTrigger after the page has loaded and DOM is ready.
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-        const smoother = ScrollSmoother.create({
-            wrapper: "#smooth-wrapper",
-            content: "#smooth-content",
-            smooth: 1.5,
-            effects: true,
-        });
-        
-        return () => smoother.kill(); // 组件卸载时销毁
-    }, []);
+    let smoother = null;
+
+    const init = () => {
+      // Ensure wrapper/content exist before creating smoother
+      if (!document.getElementById('smooth-wrapper') || !document.getElementById('smooth-content')) return;
+
+      // create smoother
+      smoother = ScrollSmoother.create({
+        wrapper: "#smooth-wrapper",
+        content: "#smooth-content",
+        smooth: 1.5,
+        effects: true,
+      });
+
+      // sometimes initial measurements are off on mobile; refresh triggers after next frame
+      requestAnimationFrame(() => {
+        ScrollTrigger.refresh();
+        // trigger a resize in case components rely on window size
+        window.dispatchEvent(new Event('resize'));
+      });
+    };
+
+    if (document.readyState === 'complete') {
+      init();
+    } else {
+      window.addEventListener('load', init, { once: true });
+      // also try DOMContentLoaded as fallback
+      document.addEventListener('DOMContentLoaded', init, { once: true });
+    }
+
+    return () => {
+      try {
+        if (smoother) smoother.kill();
+      } catch (e) {
+        // ignore
+      }
+      ScrollTrigger.getAll().forEach(t => t.kill());
+      window.removeEventListener('load', init);
+      document.removeEventListener('DOMContentLoaded', init);
+    };
+  }, []);
         
      const [copied, setCopied] = useState(false);
     
