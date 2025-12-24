@@ -24,7 +24,7 @@ export default function Page() {
  const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("Norazheng1010@hotmail.com").then(() => {
+    navigator.clipboard.writeText("norazhengpro@outlook.com").then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 1500); // 1.5 秒后隐藏提示
     });
@@ -155,10 +155,10 @@ export default function Page() {
             </div>
           </div>
           
-
+        <MarqueeDivRight />
           {/* 第二屏 */}
           <div className="secondScreen h-screen w-full flex flex-col">
-            <MarqueeDivRight />
+           
             <div className="bg-[#5862ec] box-content border-[#000037] border-[5px] flex-[1] grid grid-cols-8 grid-rows-1 pt-[6%] relative">
            
               <div className="justify-center col-span-3 col-start-2 selfie">
@@ -167,7 +167,7 @@ export default function Page() {
               <div className="col-span-3 font-mono col-start-5 pl-10 " data-speed="2" data-lag="0.3" >
                 <h1 className="text-8xl font-sans text-[#b0e86f] Screen2title bold" >Hello</h1>
                 <br />
-                <h1 className="text-8xl font-sans text-[#b0e86f] " >I AM Nora</h1>
+                <h1 className="text-8xl font-sans text-[#b0e86f] md:text-6xl" >I AM NORA</h1>
                 <span className="text-lg text-[#b0e86f] py-6 block" >
                   UX/UI DESIGNER / FRONT-END DEVELOPER
                 </span>
@@ -181,6 +181,7 @@ export default function Page() {
             </div>
           </div>
 
+          {/* 第三、四屏 */}
          <div className='thridAndFourthScreens'>
 
           <div className="thirdScreen h-screen w-full flex flex-col relative font-sans">
