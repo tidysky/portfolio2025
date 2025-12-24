@@ -42,8 +42,7 @@ export default function MobilePage(){
 
     return(
         <>
-        
-    // 1. 必须有 wrapper 
+
         <div id="smooth-wrapper">
             {/* 2. 必须有 content */}
             <div id="smooth-content">
@@ -82,7 +81,7 @@ export default function MobilePage(){
             <MarqueeDivRight />
             <div className="bg-[#5862ec] box-content border-[#000037] border-[5px] flex-[1] grid grid-cols-1 grid-rows-1 pt-[6%] relative">
               <div className="flex flex-col font-mono p-10 " data-speed="1.5" data-lag="0.3" >
-                <div className='flex flex-row'>
+                <div className='flex flex-row w-full h-full'>
                     {/* 文字 */}
                     <div className=''>
                         <h1 className="text-4xl font-sans text-[#b0e86f] Screen2title bold" >HELLO!</h1> 
@@ -92,7 +91,7 @@ export default function MobilePage(){
                         </span>
                     </div>
                     {/* 图片 */}
-                     <div className="justify-center px-6 w-full h-full " >
+                     <div className="justify-center px-6 h-full " >
                         <img src="selfie.png"  alt="selfie" />
                     </div>
                 </div>
