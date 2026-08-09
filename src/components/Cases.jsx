@@ -76,7 +76,7 @@ const CASES = [
     subtitle: "An interactive amusement park",
     tag: "THREE.JS",
     image: "/cases/3d-practice-demo.jpg",
-    technology: { name: "Three.js", icon: "threejs" },
+    technology: { name: "3D Web", icon: "threejs" },
     features: ["Animated 3D models", "Scroll-controlled camera views"],
     roles: ["Design", "Front-end development", "3D modelling"],
     href: "https://3dpracticedemo.vercel.app/",
@@ -150,7 +150,8 @@ function TechIcon({ type }) {
   if (type === "threejs") {
     return (
       <svg viewBox="0 0 34 30" aria-hidden="true" className="tech-icon-threejs">
-        <path d="M3 3 31 8 12 27 3 3Zm7 6 13 3-9 9-4-12Zm5 3 4 1-3 3-1-4Z" />
+        <path d="M17 2 31 9.5v11L17 28 3 20.5v-11L17 2Z" />
+        <path d="m3 9.5 14 7.5 14-7.5M17 17v11" />
       </svg>
     );
   }
