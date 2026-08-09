@@ -11,6 +11,7 @@ import CircularSlider from './slider.jsx';
 import LetterGlitch from './LetterGlitch';
 import StalkWorks from './StalkWorks.jsx';
 import { useGSAP } from '@gsap/react';
+import Cases from './Cases.jsx';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
@@ -72,53 +73,40 @@ export default function Page() {
       btn._handler = handler; // 保存用于卸载
     });
 
-    
-    const screenheight = window.innerHeight;
-    // const imgs = gsap.utils.toArray(".stalkimgs img");
-    const links = gsap.utils.toArray(".stalkimgs a");
+    const caseLinks = gsap.utils.toArray(".stalkimgs a");
+    const caseParallaxContext = gsap.context(() => {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
+      caseLinks.forEach((link) => {
+        const travel = 32;
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".thirdScreen",
-        start: "top top",
-        // endTrigger: ".finalimg",
-        end: "+=" + 1.55 * screenheight,
-        scrub: true,
-        pin: true,
-        // anticipatePin: 1,
-       
-      // pinSpacer: false
-      }
-    });
+        gsap.fromTo(
+          link,
+          { y: travel, scale: 0.985 },
+          {
+            y: -travel,
+            scale: 1.01,
+            ease: "none",
+            force3D: true,
+            scrollTrigger: {
+              trigger: link,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 0.7,
+              invalidateOnRefresh: true,
+              onToggle: (self) => {
+                link.style.willChange = self.isActive ? "transform" : "auto";
+              },
+            },
+          }
+        );
+      });
+    }, ".thirdScreen");
 
-   Promise.all(
-  links.map(a => {
-    const img = a.querySelector('img');
-    return new Promise(r => {
-      if (img.complete && img.naturalHeight !== 0) return r();
-      img.addEventListener('load', r, { once: true });
-      img.addEventListener('error', r, { once: true });
-    });
-  })
-).then(() => {
-  gsap.set([links[1], links[2]], { scale: 1.1, opacity: 0 });
-
-  tl.to(links[1], { y: -links[1].offsetHeight * 0.8,  opacity: 1, delay: 1, zIndex: 80 })
-    .to(links[1], { y: -links[1].offsetHeight * 0.97, scale: 1, zIndex: 80 })
-    .to(links[2], { y: -links[1].offsetHeight * 1.6,  opacity: 1, delay: 1, zIndex: 81 })
-    .to(links[2], { y: -links[1].offsetHeight * 1.94, scale: 1, zIndex: 81 })
-    .to(links[3], { y: -links[1].offsetHeight * 2.4,  opacity: 1, delay: 1, zIndex: 82 })
-    .to(links[3], { y: -links[1].offsetHeight * 2.91, scale: 1, zIndex: 82 })
-    .to(links[4], { y: -links[1].offsetHeight * 3.2,  opacity: 1, delay: 1, zIndex: 83 })
-    .to(links[4], { y: -links[1].offsetHeight * 3.88, scale: 1, zIndex: 83 })
-    // .to(links[5], { y: -links[1].offsetHeight * 4,  opacity: 1, delay: 1, zIndex: 84 })
-    // .to(links[5], { y: -links[1].offsetHeight * 4.85, scale: 1, zIndex: 84 })
-    
-});
-
+    ScrollTrigger.refresh();
 
     return () => {
+      caseParallaxContext.revert();
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
       smoother.kill();
       buttons.forEach(btn => btn.removeEventListener("click", btn._handler));
@@ -185,22 +173,7 @@ export default function Page() {
 
           {/* 第三、四屏 */}
          <div className='thridAndFourthScreens'>
-
-          <div className="thirdScreen h-screen w-full flex flex-col relative font-sans">
-            <MarqueeDivLeft />
-            <div className="bg-[#6074f4] box-content flex-1 flex flex-col relative mx-auto overflow-hidden ">
-              <div className='text-8xl text-[#b0e86f flex justify-center text-center w-[100vw] text-[#b0e86f] pt-[5%] pb-[2%] bebas-neue-regular'>CASES</div>
-             <div className="flex flex-col mx-auto stalkimgs">
-                <a href='https://zs-fabulous-site-fc762b.webflow.io/' className='cursor-pointer' target='_blank'><img src="works0.png" className="stack-image" alt="AItool app" /></a>
-                <a href='https://myweatherapp-flame.vercel.app/' className='cursor-pointer' target='_blank'><img src="weatherapp.png" className="stack-image"  /></a>
-                <a href='https://sharingcountry.vercel.app/' className='cursor-pointer' target='_blank'><img src="works1.png" className="stack-image" /></a>
-                <a href='https://www.behance.net/zhengnora' className='cursor-pointer' target='_blank'><img src="works2.png" className="stack-image " /></a>
-                <a href='https://3dpracticedemo.vercel.app/' className='cursor-pointer' target='_blank'><img src="works3.png" className="stack-image " /></a>
-                
-              </div>
-
-            </div>
-          </div>
+          <Cases />
 
           {/* 第四屏 */}
           <div className="fourthScreen h-[40vh] w-full flex flex-col relative block">

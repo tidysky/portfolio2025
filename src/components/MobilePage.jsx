@@ -12,6 +12,7 @@ import LetterGlitch from './LetterGlitch';
 import StalkWorks from './StalkWorks.jsx';
 import { useGSAP } from '@gsap/react';
 import MobileCanvas from "./MobileCanvas.jsx"
+import Cases from './Cases.jsx';
 
 export default function MobilePage(){
 
@@ -140,23 +141,9 @@ export default function MobilePage(){
          
 
            {/* 第三、四屏 */}
-         <div className='thridAndFourthScreens'>
-
-          <div className="thirdScreen h-full w-full flex flex-col relative font-sans">
-            <MarqueeDivLeft />
-            <div className="bg-[#6074f4] box-content flex-1 flex flex-col relative mx-auto overflow-hidden ">
-              <div className='text-8xl text-[#b0e86f flex justify-center text-center w-[100vw] text-[#b0e86f] pt-[5%] pb-[2%] bebas-neue-regular'>CASES</div>
-             <div className="flex flex-col mx-auto stalkimgs gap-6 pb-10">
-                 <a href='https://zs-fabulous-site-fc762b.webflow.io/' className='cursor-pointer' target='_blank'><img src="works0.png" className="stack-image" alt="AItool app" /></a>
-                <a href='https://myweatherapp-flame.vercel.app/' className='cursor-pointer' target='_blank'><img src="weatherapp.png" className="stack-image"  /></a>
-                <a href='https://sharingcountry.vercel.app/' className='cursor-pointer' target='_blank'><img src="works1.png" className="stack-image" /></a>
-                <a href='https://www.behance.net/zhengnora' className='cursor-pointer' target='_blank'><img src="works2.png" className="stack-image " /></a>
-                <a href='https://3dpracticedemo.vercel.app/' className='cursor-pointer' target='_blank'><img src="works3.png" className="stack-image " /></a>
-             </div>
-
-            </div>
-          </div>
-          </div>
+	         <div className='thridAndFourthScreens'>
+	          <Cases />
+	          </div>
 
 
 
