@@ -4,6 +4,32 @@ import MarqueeDivLeft from "./scrollineLeft";
 const CASES = [
   {
     number: "01",
+    title: "HADDON Online Store",
+    titleLines: ["HADDON", "Online Store"],
+    largeTitle: true,
+    subtitle: "Shopify coding practice",
+    tag: "SHOPIFY",
+    image: "/cases/haddon-online-store.png",
+    imageFit: "contain",
+    technology: { name: "Shopify", icon: "shopify" },
+    features: ["Responsive online store", "Custom Shopify theme coding"],
+    roles: ["Shopify development"],
+    href: "http://bathroom-k6y3pjcj.myshopify.com",
+  },
+  {
+    number: "02",
+    title: "Outdoor Funiture",
+    subtitle: "Shopify coding practice",
+    tag: "SHOPIFY",
+    image: "/cases/outdoor-funiture-shopify.png",
+    imageFit: "contain",
+    technology: { name: "Shopify", icon: "shopify" },
+    features: ["Responsive online store", "Custom Shopify theme coding"],
+    roles: ["Shopify development"],
+    href: "http://fasion-v2mmjpdk.myshopify.com",
+  },
+  {
+    number: "03",
     title: "Future Partner",
     subtitle: "A future reading experience.",
     tag: "FULL STACK",
@@ -15,7 +41,7 @@ const CASES = [
     href: "https://future-partner.vercel.app/",
   },
   {
-    number: "02",
+    number: "04",
     title: "Plumber Website",
     subtitle: "Responsive website for a Sydney plumbing service",
     tag: "WORDPRESS",
@@ -27,7 +53,7 @@ const CASES = [
     href: "https://mistyrose-pheasant-784717.hostingersite.com/",
   },
   {
-    number: "03",
+    number: "05",
     title: "PromptPilot",
     subtitle: "An Webpage made by Webflow",
     tag: "AI PRODUCT",
@@ -38,7 +64,7 @@ const CASES = [
     href: "https://zs-fabulous-site-fc762b.webflow.io/",
   },
   {
-    number: "04",
+    number: "06",
     title: "Weather Forecast",
     subtitle: "Weather forecast application",
     tag: "WEB APP",
@@ -49,7 +75,7 @@ const CASES = [
     href: "https://myweatherapp-flame.vercel.app/",
   },
   {
-    number: "05",
+    number: "07",
     title: "Sharing Country",
     subtitle: "Official website of a board game",
     tag: "BOARD GAME",
@@ -60,7 +86,7 @@ const CASES = [
     href: "https://sharingcountry.vercel.app/",
   },
   {
-    number: "06",
+    number: "08",
     title: "Game Webpage Design",
     subtitle: "Web experiences for different games",
     tag: "UI / UX",
@@ -71,7 +97,7 @@ const CASES = [
     href: "https://www.behance.net/zhengnora",
   },
   {
-    number: "07",
+    number: "09",
     title: "3D Practice Demo",
     subtitle: "An interactive amusement park",
     tag: "THREE.JS",
@@ -86,7 +112,10 @@ const CASES = [
 function CasePlaceholder({ number, title, tag, image, imageFit = "cover" }) {
   if (image) {
     return (
-      <div className="case-placeholder case-placeholder-image">
+      <div
+        className={`case-placeholder case-placeholder-image ${imageFit === "contain" ? "case-placeholder-blended" : ""}`}
+        style={imageFit === "contain" ? { "--case-image-url": `url("${image}")` } : undefined}
+      >
         <img
           className={`case-project-image ${imageFit === "contain" ? "case-project-image-contain" : ""}`}
           src={image}
@@ -124,6 +153,16 @@ function CasePlaceholder({ number, title, tag, image, imageFit = "cover" }) {
 }
 
 function TechIcon({ type }) {
+  if (type === "shopify") {
+    return (
+      <svg viewBox="0 0 34 34" aria-hidden="true" className="tech-icon-shopify">
+        <path d="M8 11h18l2 19H6L8 11Z" />
+        <path d="M11.5 12V9.5a5.5 5.5 0 0 1 11 0V12" />
+        <path d="M20.5 16.5c-1.2-.7-4.6-1.3-4.6 1 0 2.7 5.2 1.9 5.2 5.3 0 3-4.3 3.8-7.1 2.1" />
+      </svg>
+    );
+  }
+
   if (type === "react") {
     return (
       <svg viewBox="0 0 36 28" aria-hidden="true" className="tech-icon-react">
@@ -228,7 +267,13 @@ function CaseCard({ project }) {
 
           <div className="case-details">
             <div className="case-details-main">
-              <h2>{project.title}</h2>
+              <h2 className={project.largeTitle ? "case-title-large" : undefined}>
+                {project.titleLines
+                  ? project.titleLines.map((line) => (
+                      <span className="case-title-line" key={line}>{line}</span>
+                    ))
+                  : project.title}
+              </h2>
               <p className="case-subtitle">{project.subtitle}</p>
 
               <div className="case-feature-block">

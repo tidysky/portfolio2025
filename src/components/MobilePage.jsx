@@ -120,7 +120,7 @@ export default function MobilePage(){
                         <h1 className="text-4xl font-sans text-[#b0e86f] Screen2title bold" >HELLO!</h1> 
                         <h1 className="text-6xl font-sans text-[#b0e86f]" >I AM NORA</h1>
                         <span className="text-base text-[#b0e86f] py-6 block" >
-                        UX/UI DESIGNER <br />FRONT-END DEVELOPER
+                        AI Engineer <br />Front-End Developer <br />CMS Developer
                         </span>
                     </div>
                     {/* 图片 */}
