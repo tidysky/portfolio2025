@@ -129,7 +129,7 @@ export default function MobilePage(){
                     </div>
                 </div>
                 <p className="text-lg py-5 text-[#eff4ff]" >
-                    A design engineer with experience in UI/UX design and front-end development.  <br /><br />Skilled in mobile first web development and user-centered interactive design.  <br /><br />I learn fast, stay curious, and work well with people. Looking for opportunities right now.
+                    A design engineer with strong front-end development, UI/UX design, and AI-powered product experience.  <br /><br />Skilled in turning ideas and designs into responsive, production-ready code using modern web technologies.
 </p>
                 {/* <>左边放个小鲨鱼</> */}
               </div>
