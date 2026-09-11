@@ -4,7 +4,7 @@ import { gsap } from 'gsap';
 import '../MarqueeDiv.css'; // 确保路径正确，如果MarqueeDiv.jsx和MarqueeDiv.css在同一文件夹，请使用 "./"
 
 const MarqueeDivRight = () => {
-  const baseContent = "2026 PORTFOLIO　　◈　　UI/UX DESIGNER　　Ω　　FRONT-END DEVELOPER　　☉　　CMS DEVELOPER　　☮　　MULTIMEDIA SPECIALIST　　◈　　";
+  const baseContent = "2026 PORTFOLIO　　◈　　UI/UX DESIGNER　　Ω　　FRONT-END DEVELOPER　　☉　　CMS DEVELOPER　　☮　　MULTIMEDIA SPECIALIST　　◈　　AI ENGINEER　　Ω　　";
 
   const repeatedText = baseContent.repeat(20);
   const marqueeContentRef = useRef(null);

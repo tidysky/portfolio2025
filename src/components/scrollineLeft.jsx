@@ -4,7 +4,7 @@ import { gsap } from 'gsap';
 import '../MarqueeDiv.css'; // 沿用之前的 CSS 文件
 
 const MarqueeDivLeft = () => {
-  const baseContent = "2026 PORTFOLIO　　◈　　UI/UX DESIGNER　　Ω　　FRONT-END DEVELOPER　　☉　　CMS DEVELOPER　　☮　　MULTIMEDIA SPECIALIST　　◈　　";
+  const baseContent = "2026 PORTFOLIO　　◈　　UI/UX DESIGNER　　Ω　　FRONT-END DEVELOPER　　☉　　CMS DEVELOPER　　☮　　MULTIMEDIA SPECIALIST　　◈　　AI ENGINEER　　Ω　　";
 
   // 将文字内容重复足够多次，以确保它始终能填满屏幕，并且能无缝衔接。
   // 我们重复 20 次，以确保在任何宽屏显示器上都不会出现空白。
