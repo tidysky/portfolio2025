@@ -38,7 +38,7 @@ const CASES = [
     technology: { name: "Full stack", icon: "fullstack" },
     features: ["Responsive full-stack application", "Users can pay online and view their reports"],
     roles: ["Design", "Full-stack development"],
-    href: "https://future-partner.vercel.app/",
+    href: "https://futurespouse.vercel.app/",
   },
   {
     number: "04",
