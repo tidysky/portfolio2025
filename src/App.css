@@ -122,6 +122,36 @@ canvas{
   text-align: center;
 }
 
+.profile-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.profile-roles span {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(176, 232, 111, 0.58);
+  background: rgba(0, 0, 55, 0.16);
+  color: #b0e86f;
+  font-size: clamp(0.82rem, 1.15vw, 1rem);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.profile-roles span::before {
+  width: 0.42rem;
+  height: 0.42rem;
+  flex: 0 0 0.42rem;
+  background: #b0e86f;
+  content: "";
+  transform: rotate(45deg);
+}
+
 .case-list {
   display: flex;
   width: 100%;

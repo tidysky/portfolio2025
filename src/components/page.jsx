@@ -159,9 +159,12 @@ export default function Page() {
                 <h1 className="text-8xl font-sans text-[#b0e86f] Screen2title bold" >Hello</h1>
                 <br />
                 <h1 className="text-8xl font-sans text-[#b0e86f] md:text-6xl" >I AM NORA</h1>
-                <span className="text-lg text-[#b0e86f] py-6 block" >
-                  AI Engineer / Designer / Developer / Multimedia&nbsp;Specialist
-                </span>
+                <div className="profile-roles" aria-label="Professional roles">
+                  <span>AI Engineer</span>
+                  <span>Designer</span>
+                  <span>Developer</span>
+                  <span>Multimedia Specialist</span>
+                </div>
                 <p className="text-lg py-1 text-[#eff4ff]" >
                   A design engineer with strong front-end development, UI/UX design, and AI-powered product experience.  <br /><br />Skilled in turning ideas and designs into responsive, production-ready code using modern web technologies.
 </p>
